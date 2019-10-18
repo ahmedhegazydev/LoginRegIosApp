@@ -8,13 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, BaseModelProtocol{
+    
+     @IBOutlet weak var tableUsers: UITableView!
+    var feedItems: NSArray = NSArray()
+    var selectedLocation : User = User()
 
+    
+    
+    
+    func itemsDownloaded(items: NSArray) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tableUsers.delegate = self
+        self.tableUsers.dataSource = self
+        
+        let downloadProtocol = Base()
+        downloadProtocol.delegate = self
+        downloadProtocol.downloadItems()
+        
     }
 
+    
+    
+    
+    
 
 }
 
