@@ -53,17 +53,101 @@
         <!--Save Item-->
         <scene sceneID="OZg-pg-sKX">
             <objects>
-                <viewController title="Save Item" id="WOk-6u-s98" sceneMemberID="viewController">
+                <viewController title="Save Item" id="WOk-6u-s98" customClass="SaveViewController" customModule="LoginRegIosPhp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fl9-KP-Tw7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-Xv-sXW">
+                                <rect key="frame" x="10" y="66" width="355" height="446"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66C-hj-57z">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q05-EF-yWn">
+                                        <rect key="frame" x="0.0" y="58" width="355" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWq-hy-7n0">
+                                        <rect key="frame" x="0.0" y="116" width="355" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TjK-kn-icr">
+                                        <rect key="frame" x="0.0" y="174" width="355" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xs-DN-0qi" userLabel="Tf Phone">
+                                        <rect key="frame" x="0.0" y="232" width="355" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1lz-fF-KfQ">
+                                        <rect key="frame" x="0.0" y="290" width="355" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDd-sb-G3V" userLabel="Tf Confirm Passwodr">
+                                        <rect key="frame" x="0.0" y="348" width="355" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1K-SN-uMM">
+                                        <rect key="frame" x="0.0" y="406" width="355" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Bp6-9F-pWn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnRegister:" destination="WOk-6u-s98" eventType="touchUpInside" id="N8c-R0-2bs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aUy-Xv-sXW" firstAttribute="top" secondItem="Ffe-C7-qID" secondAttribute="top" constant="46" id="60F-Ts-jIc"/>
+                            <constraint firstItem="aUy-Xv-sXW" firstAttribute="leading" secondItem="Ffe-C7-qID" secondAttribute="leading" constant="10" id="9KL-rD-JyX"/>
+                            <constraint firstItem="Ffe-C7-qID" firstAttribute="bottom" secondItem="aUy-Xv-sXW" secondAttribute="bottom" constant="155" id="TIT-Hm-3b8"/>
+                            <constraint firstItem="Ffe-C7-qID" firstAttribute="trailing" secondItem="aUy-Xv-sXW" secondAttribute="trailing" constant="10" id="inU-Nn-hse"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ffe-C7-qID"/>
                     </view>
+                    <connections>
+                        <outlet property="tfEmail" destination="TjK-kn-icr" id="JSH-6R-j3z"/>
+                        <outlet property="tfFirstName" destination="66C-hj-57z" id="UVm-px-yq2"/>
+                        <outlet property="tfLastName" destination="q05-EF-yWn" id="s0v-un-xgo"/>
+                        <outlet property="tfPassword" destination="1lz-fF-KfQ" id="QPG-uA-GfR"/>
+                        <outlet property="tfPhoneNumber" destination="3xs-DN-0qi" id="KGy-Rs-JlJ"/>
+                        <outlet property="tfUserName" destination="mWq-hy-7n0" id="tvy-oJ-ZKp"/>
+                        <outlet property="tvConfirmPasswodr" destination="EDd-sb-G3V" id="orr-Va-nrb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIK-wd-SAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-27"/>
+            <point key="canvasLocation" x="664.79999999999995" y="-27.436281859070466"/>
         </scene>
     </scenes>
 </document>

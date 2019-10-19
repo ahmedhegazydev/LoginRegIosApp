@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5DAC7049AC6656D6C371AA /* Pods_LoginRegIosPhp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9E1F20952D818D646CC54F /* Pods_LoginRegIosPhp.framework */; };
 		E04C7A03235A423200E44061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C7A02235A423200E44061 /* AppDelegate.swift */; };
 		E04C7A05235A423200E44061 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04C7A04235A423200E44061 /* ViewController.swift */; };
 		E04C7A08235A423200E44061 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04C7A06235A423200E44061 /* Main.storyboard */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17763F7E74AD3604B66BB07F /* Pods-LoginRegIosPhp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginRegIosPhp.debug.xcconfig"; path = "Target Support Files/Pods-LoginRegIosPhp/Pods-LoginRegIosPhp.debug.xcconfig"; sourceTree = "<group>"; };
+		4C9E1F20952D818D646CC54F /* Pods_LoginRegIosPhp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginRegIosPhp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC01213BA7986918E71A11E /* Pods-LoginRegIosPhp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginRegIosPhp.release.xcconfig"; path = "Target Support Files/Pods-LoginRegIosPhp/Pods-LoginRegIosPhp.release.xcconfig"; sourceTree = "<group>"; };
 		E04C79FF235A423200E44061 /* LoginRegIosPhp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginRegIosPhp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04C7A02235A423200E44061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E04C7A04235A423200E44061 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5DAC7049AC6656D6C371AA /* Pods_LoginRegIosPhp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B8682F172495153AB008F19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C9E1F20952D818D646CC54F /* Pods_LoginRegIosPhp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E04C79F6235A423200E44061 = {
 			isa = PBXGroup;
 			children = (
 				E04C7A01235A423200E44061 /* LoginRegIosPhp */,
 				E04C7A00235A423200E44061 /* Products */,
+				E62A1636EE24982F4659D36F /* Pods */,
+				7B8682F172495153AB008F19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +123,16 @@
 			path = Save;
 			sourceTree = "<group>";
 		};
+		E62A1636EE24982F4659D36F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17763F7E74AD3604B66BB07F /* Pods-LoginRegIosPhp.debug.xcconfig */,
+				6FC01213BA7986918E71A11E /* Pods-LoginRegIosPhp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E04C7A14235A423400E44061 /* Build configuration list for PBXNativeTarget "LoginRegIosPhp" */;
 			buildPhases = (
+				E20C7BCDAAB47FF40E2A769E /* [CP] Check Pods Manifest.lock */,
 				E04C79FB235A423200E44061 /* Sources */,
 				E04C79FC235A423200E44061 /* Frameworks */,
 				E04C79FD235A423200E44061 /* Resources */,
@@ -173,6 +199,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E20C7BCDAAB47FF40E2A769E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginRegIosPhp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E04C79FB235A423200E44061 /* Sources */ = {
@@ -328,6 +379,7 @@
 		};
 		E04C7A15235A423400E44061 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17763F7E74AD3604B66BB07F /* Pods-LoginRegIosPhp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -345,6 +397,7 @@
 		};
 		E04C7A16235A423400E44061 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC01213BA7986918E71A11E /* Pods-LoginRegIosPhp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

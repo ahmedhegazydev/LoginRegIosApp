@@ -1,0 +1,6 @@
+framework module Pods_LoginRegIosPhp {
+  umbrella header "Pods-LoginRegIosPhp-umbrella.h"
+
+  export *
+  module * { export * }
+}
